@@ -21,8 +21,6 @@
     <Folder Include="Base\" />
     <Folder Include="Model\" />
     <Folder Include="Controls\" />
-    <Folder Include="ViewModel\" />
-    <Folder Include="View\" />
   </ItemGroup>
 
   <ItemGroup>

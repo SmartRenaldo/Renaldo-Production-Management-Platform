@@ -92,7 +92,7 @@
         </Border>
         
         <!--Content-->
-        <ContentControl Grid.Row="1" Content=""/>
+        <ContentControl Grid.Row="1" Content="{Binding PageContent}"/>
         
         <!--status bar-->
         <Border Grid.Row="2" BorderBrush="#5500cc66" BorderThickness="0, 1, 0, 0">
@@ -101,7 +101,7 @@
                     <ColumnDefinition/>
                     <ColumnDefinition Width="auto"/>
                 </Grid.ColumnDefinitions>
-                <Border Margin="0, 5">
+                <Border Margin="0, 3, 0, 3">
                     <Border.Background>
                         <VisualBrush TileMode="Tile" Viewport="0, 0, 7, 7" ViewportUnits="Absolute">
                             <VisualBrush.Visual>

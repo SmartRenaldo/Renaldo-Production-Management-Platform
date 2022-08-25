@@ -19,3 +19,5 @@ C:\Projects\Renaldo Production Management Platform\RenaldoProductionManagementPl
 C:\Projects\Renaldo Production Management Platform\RenaldoProductionManagementPlatform\RenaldoProductionManagementPlatform\obj\Debug\net6.0-windows\RenaldoProductionManagementPlatform.pdb
 C:\Projects\Renaldo Production Management Platform\RenaldoProductionManagementPlatform\RenaldoProductionManagementPlatform\obj\Debug\net6.0-windows\RenaldoProductionManagementPlatform.genruntimeconfig.cache
 C:\Projects\Renaldo Production Management Platform\RenaldoProductionManagementPlatform\RenaldoProductionManagementPlatform\obj\Debug\net6.0-windows\ref\RenaldoProductionManagementPlatform.dll
+C:\Projects\Renaldo Production Management Platform\RenaldoProductionManagementPlatform\RenaldoProductionManagementPlatform\obj\Debug\net6.0-windows\View\MonitorView.g.cs
+C:\Projects\Renaldo Production Management Platform\RenaldoProductionManagementPlatform\RenaldoProductionManagementPlatform\obj\Debug\net6.0-windows\View\MonitorView.baml

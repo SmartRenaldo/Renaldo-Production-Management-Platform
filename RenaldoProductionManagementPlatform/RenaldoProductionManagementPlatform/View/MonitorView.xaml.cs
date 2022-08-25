@@ -1,6 +1,4 @@
-﻿using RenaldoProductionManagementPlatform.View;
-using RenaldoProductionManagementPlatform.ViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,20 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace RenaldoProductionManagementPlatform
+namespace RenaldoProductionManagementPlatform.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MonitorView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MonitorView : UserControl
     {
-        MainViewModel mainViewModel = new MainViewModel();
-        public MainWindow()
+        public MonitorView()
         {
             InitializeComponent();
-
-            this.DataContext = mainViewModel;
-            mainViewModel.PageContent = new MonitorView();
         }
     }
 }
