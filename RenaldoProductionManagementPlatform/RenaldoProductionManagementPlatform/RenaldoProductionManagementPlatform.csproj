@@ -8,12 +8,31 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Asset\" />
-    <Folder Include="Model\" />
+    <None Remove="Asset\Font\digital_display.ttf" />
+    <None Remove="Asset\Font\iconfont.ttf" />
+    <None Remove="Asset\Image\3d-printer.png" />
+    <None Remove="Asset\Image\computer.png" />
+    <None Remove="Asset\Image\cool-r-logos-209128.png" />
+    <None Remove="Asset\Image\R-logo.png" />
+    <None Remove="Asset\Image\test.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Base\" />
+    <Folder Include="Model\" />
     <Folder Include="Controls\" />
     <Folder Include="ViewModel\" />
     <Folder Include="View\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Asset\Font\digital_display.ttf" />
+    <Resource Include="Asset\Font\iconfont.ttf" />
+    <Resource Include="Asset\Image\3d-printer.png" />
+    <Resource Include="Asset\Image\computer.png" />
+    <Resource Include="Asset\Image\cool-r-logos-209128.png" />
+    <Resource Include="Asset\Image\test.png" />
+    <Resource Include="Asset\Image\R-logo.png" />
   </ItemGroup>
 
 </Project>

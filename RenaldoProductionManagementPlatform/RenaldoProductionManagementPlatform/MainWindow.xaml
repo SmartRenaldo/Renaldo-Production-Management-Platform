@@ -6,12 +6,39 @@
         xmlns:local="clr-namespace:RenaldoProductionManagementPlatform"
         WindowStartupLocation="CenterScreen" Background="Transparent"
         FontSize="12" FontWeight="ExtraLight"
+        WindowStyle="None"
+        AllowsTransparency="True"
         mc:Ignorable="d"
         Title="Renaldo Production Management Platform" Height="700" Width="1150">
     <WindowChrome.WindowChrome>
         <WindowChrome GlassFrameThickness="-1"/>
     </WindowChrome.WindowChrome>
     <Grid>
-        <TextBlock Text="Test"/>
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="#FF00e673" Offset="0"/>
+                <GradientStop Color="#FF00b359" Offset="0.3"/>
+                <GradientStop Color="#FF004d26" Offset="1"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+
+        <Border BorderBrush="#5500cc66" BorderThickness="0, 0, 0, 1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Image Source="Asset/Image/R-logo.png" Margin="10, 7"/>
+                <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                    <TextBlock Text="{Binding Title, RelativeSource={RelativeSource AncestorType=Window}}"/>
+                </StackPanel>
+            </Grid>
+        </Border>
     </Grid>
 </Window>
