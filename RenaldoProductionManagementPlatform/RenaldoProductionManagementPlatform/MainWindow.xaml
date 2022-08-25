@@ -7,11 +7,11 @@
         WindowStartupLocation="CenterScreen"
         FontSize="12" FontWeight="ExtraLight"
         mc:Ignorable="d"
-        Title="Renaldo Production Management Platform" Height="450" Width="800">
+        Title="Renaldo Production Management Platform" Height="700" Width="1150">
     <WindowChrome.WindowChrome>
         <WindowChrome GlassFrameThickness="-1"/>
     </WindowChrome.WindowChrome>
     <Grid>
-
+        <TextBlock Text="Test"/>
     </Grid>
 </Window>
