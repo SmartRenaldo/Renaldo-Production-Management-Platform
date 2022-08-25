@@ -45,7 +45,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition/>
-            <RowDefinition Height="25"/>
+            <RowDefinition Height="15"/>
         </Grid.RowDefinitions>
 
         <!--Header-->
@@ -88,6 +88,30 @@
                         </Border.Background>
                     </Border>
                 </Grid>
+            </Grid>
+        </Border>
+        
+        <!--Content-->
+        <ContentControl Grid.Row="1" Content=""/>
+        
+        <!--status bar-->
+        <Border Grid.Row="2" BorderBrush="#5500cc66" BorderThickness="0, 1, 0, 0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <Border Margin="0, 3, 0, 2">
+                    <Border.Background>
+                        <VisualBrush TileMode="Tile" Viewport="0, 0, 7, 7" ViewportUnits="Absolute">
+                            <VisualBrush.Visual>
+                                <Grid Width="20" Height="20">
+                                    <Line X1="0" Y1="10" X2="10" Y2="0" Stroke="Gold" StrokeThickness="1"/>
+                                </Grid>
+                            </VisualBrush.Visual>
+                        </VisualBrush>
+                    </Border.Background>
+                </Border>
             </Grid>
         </Border>
     </Grid>
