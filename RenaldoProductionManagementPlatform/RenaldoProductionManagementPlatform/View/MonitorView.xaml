@@ -3,10 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              xmlns:local="clr-namespace:RenaldoProductionManagementPlatform.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <TextBlock Text="Monitor" FontSize="30" Foreground="White"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="120"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat=HH:mm}" VerticalAlignment="Center" Foreground="White"
+                           FontSize="30" FontFamily="../Asset/Font/#Digital Display"/>
+                <StackPanel TextBlock.Foreground="White" Margin="15, 0, 0, 0">
+                    <TextBlock Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat=dd/MMM/yyyy}"/>
+                    <TextBlock Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat=dddd}"/>
+                </StackPanel>
+            </StackPanel>
+            
+        </Grid>
     </Grid>
 </UserControl>
