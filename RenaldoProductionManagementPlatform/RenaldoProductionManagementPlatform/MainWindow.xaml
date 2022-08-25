@@ -48,6 +48,7 @@
             <RowDefinition Height="25"/>
         </Grid.RowDefinitions>
 
+        <!--Header-->
         <Border BorderBrush="#5500cc66" BorderThickness="0, 0, 0, 1">
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -70,8 +71,21 @@
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                             <Button Content="&#xe624;" Style="{StaticResource ControlButtonStyle}"/>
                             <Button Content="&#xe600;" Style="{StaticResource ControlButtonStyle}"/>
-                            <Button Content="&#xe609;" Style="{StaticResource ControlButtonStyle}"/>
+                            <Button Content="&#xe609;" Style="{StaticResource ControlButtonStyle}"
+                                    Background="DarkRed"/>
                         </StackPanel>
+                    </Border>
+                    <Border Grid.Row="1" BorderBrush="#5500cc66" BorderThickness="0, 1, 0, 0"/>
+                    <Border Grid.Row="1" Margin="0, 3, 0, 2">
+                        <Border.Background>
+                            <VisualBrush TileMode="Tile" Viewport="0, 0, 7, 7" ViewportUnits="Absolute">
+                                <VisualBrush.Visual>
+                                    <Grid Width="20" Height="20">
+                                        <Line X1="0" Y1="10" X2="10" Y2="0" Stroke="Gold" StrokeThickness="1"/>
+                                    </Grid>
+                                </VisualBrush.Visual>
+                            </VisualBrush>
+                        </Border.Background>
                     </Border>
                 </Grid>
             </Grid>
