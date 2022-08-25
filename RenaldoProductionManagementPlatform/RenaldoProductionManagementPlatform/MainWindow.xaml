@@ -45,7 +45,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition/>
-            <RowDefinition Height="15"/>
+            <RowDefinition Height="18"/>
         </Grid.RowDefinitions>
 
         <!--Header-->
@@ -101,7 +101,7 @@
                     <ColumnDefinition/>
                     <ColumnDefinition Width="auto"/>
                 </Grid.ColumnDefinitions>
-                <Border Margin="0, 3, 0, 2">
+                <Border Margin="0, 5">
                     <Border.Background>
                         <VisualBrush TileMode="Tile" Viewport="0, 0, 7, 7" ViewportUnits="Absolute">
                             <VisualBrush.Visual>
@@ -112,6 +112,8 @@
                         </VisualBrush>
                     </Border.Background>
                 </Border>
+
+                <TextBlock Grid.Column="1" Text="© 2022 Renaldo. All Rights Reserved." Foreground="White" FontSize="12" FontWeight="Bold" Margin="10, 0"/>
             </Grid>
         </Border>
     </Grid>
