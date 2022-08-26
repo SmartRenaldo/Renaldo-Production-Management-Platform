@@ -17,10 +17,11 @@
                             <Polyline Points="0 30, 0 10, 10 0, 30 0" Stroke="#AA53e453" StrokeThickness="1"
                                       VerticalAlignment="Top" HorizontalAlignment="Left"/>
                             <Ellipse Width="4" Height="4" VerticalAlignment="Top" HorizontalAlignment="Left"
-                                     Fill="#9918AABD" Margin="25, -2, 0, 0"/>
+                                     Fill="#9953e453" Margin="25, -2, 0, 0"/>
                             <Ellipse Width="4" Height="4" VerticalAlignment="Top" HorizontalAlignment="Left"
-                                     Fill="#9918AABD" Margin="-2, 25, 0, 0"/>
-                            
+                                     Fill="#9953e453" Margin="-2, 25, 0, 0"/>
+                            <Path Data="M0 0, 3 3, 30, 3, 33 0, 68 0, 73 7, 78 7, 78 10M8 0, 25 0" 
+                                  Stroke="#5553e453" VerticalAlignment="Top" HorizontalAlignment="Right"/>
                         </Grid>
                     </ControlTemplate>
                 </Setter.Value>
