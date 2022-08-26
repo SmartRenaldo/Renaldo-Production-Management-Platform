@@ -68,7 +68,10 @@
                     </ItemsControl.ItemsPanel>
                 </ItemsControl>
             </StackPanel>
-            
+
+            <Button Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="20, 0"
+                    Content="Configure" Tag="&#xe625;" Style="{StaticResource ButtonStyle}" Height="33" Width="92">
+            </Button>
         </Grid>
     </Grid>
 </UserControl>
