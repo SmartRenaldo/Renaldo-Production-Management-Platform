@@ -9,7 +9,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border BorderThickness="1">
+                        <Border BorderThickness="1" Background="Transparent" Name="border">
                             <Border.BorderBrush>
                                 <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 0">
                                     <GradientStop Color="#33FFFFFF" Offset="0"/>
@@ -24,6 +24,12 @@
                                 <TextBlock Text="{TemplateBinding Content}"/>
                             </StackPanel>
                         </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#16FFFFFF"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
