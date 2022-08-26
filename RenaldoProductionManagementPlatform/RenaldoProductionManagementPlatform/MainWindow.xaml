@@ -113,7 +113,8 @@
                     </Border.Background>
                 </Border>
 
-                <TextBlock Grid.Column="1" Text="© 2022 Renaldo. All Rights Reserved." Foreground="White" FontSize="12" FontWeight="Bold" Margin="10, 0"/>
+                <TextBlock Grid.Column="1" Text="© 2022 Renaldo. All Rights Reserved." Foreground="White" FontSize="12"
+                           FontWeight="Bold" Margin="10, 0"/>
             </Grid>
         </Border>
     </Grid>
