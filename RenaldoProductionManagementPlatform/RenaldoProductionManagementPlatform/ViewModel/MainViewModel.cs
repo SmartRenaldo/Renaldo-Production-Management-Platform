@@ -32,10 +32,19 @@ namespace RenaldoProductionManagementPlatform.ViewModel
             set { SetProperty(ref _productionTotalCount, value); }
         }
 
+        private string _defectiveItemsTotalCount;
+        public string DefectiveItemsTotalCount
+        {
+            get { return _defectiveItemsTotalCount; }
+            set { SetProperty(ref _defectiveItemsTotalCount, value); }
+        }
+
         public MainViewModel()
         {
             TotalCount = _random.Next(10, 500).ToString("0000");
-            ProductionTotalCount = _random.Next(1000, 20000).ToString("00000");
+            var ProductionTotalCountInt = _random.Next(1000, 20000);
+            ProductionTotalCount = ProductionTotalCountInt.ToString("00000");
+            DefectiveItemsTotalCount = (0.01 * ProductionTotalCountInt * _random.Next(3, 9)).ToString("0000");
         }
     }
 }

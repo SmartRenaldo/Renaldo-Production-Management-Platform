@@ -58,7 +58,17 @@
                         </ItemsPanelTemplate>
                     </ItemsControl.ItemsPanel>
                 </ItemsControl>
+
+                <TextBlock Text="Defective Items&#13;Count" VerticalAlignment="Center" Foreground="#AAFFFFFF" Margin="20, 0, 10, 0"/>
+                <ItemsControl ItemsSource="{Binding DefectiveItemsTotalCount}" ItemTemplate="{StaticResource dataTemp}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <VirtualizingStackPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
             </StackPanel>
+            
         </Grid>
     </Grid>
 </UserControl>
