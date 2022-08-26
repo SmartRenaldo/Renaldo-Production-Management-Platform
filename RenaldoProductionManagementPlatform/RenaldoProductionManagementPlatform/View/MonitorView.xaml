@@ -31,40 +31,32 @@
             <!-- Count -->
             <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" 
                         Margin="20, 0, 0, 0">
+                <StackPanel.Resources>
+                    <DataTemplate x:Key="dataTemp">
+                        <Border Width="18" Background="#3318AABD" Margin="2, 0">
+                            <TextBlock Text="{Binding}" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                       Foreground="White" FontSize="16" FontWeight="Normal"/>
+                        </Border>
+                    </DataTemplate>
+                </StackPanel.Resources>
                 <TextBlock Text="&#xe661;" FontFamily="../Asset/Font/#iconfont" Foreground="#AAFFFFFF" FontSize="20"
                            VerticalAlignment="Center"/>
                 <TextBlock Text="Machine&#13;Count" VerticalAlignment="Center" Margin="10, 0" Foreground="#AAFFFFFF"/>
-                <ItemsControl ItemsSource="{Binding TotalCount}">
+                <ItemsControl ItemsSource="{Binding TotalCount}" ItemTemplate="{StaticResource dataTemp}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
                             <VirtualizingStackPanel Orientation="Horizontal"/>
                         </ItemsPanelTemplate>
-                    </ItemsControl.ItemsPanel>
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <Border Width="18" Background="#3318AABD" Margin="2, 0">
-                                <TextBlock Text="{Binding}" VerticalAlignment="Center" HorizontalAlignment="Center"
-                                       Foreground="White" FontSize="16" FontWeight="Normal"/>
-                            </Border>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
+                    </ItemsControl.ItemsPanel>                    
                 </ItemsControl>
 
                 <TextBlock Text="Production&#13;Count" VerticalAlignment="Center" Foreground="#AAFFFFFF" Margin="20, 0, 10, 0"/>
-                <ItemsControl ItemsSource="{Binding ProductionTotalCount}">
+                <ItemsControl ItemsSource="{Binding ProductionTotalCount}" ItemTemplate="{StaticResource dataTemp}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
                             <VirtualizingStackPanel Orientation="Horizontal"/>
                         </ItemsPanelTemplate>
                     </ItemsControl.ItemsPanel>
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <Border Width="18" Background="#3318AABD" Margin="2, 0">
-                                <TextBlock Text="{Binding}" VerticalAlignment="Center" HorizontalAlignment="Center"
-                                       Foreground="White" FontSize="16" FontWeight="Normal"/>
-                            </Border>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
                 </ItemsControl>
             </StackPanel>
         </Grid>

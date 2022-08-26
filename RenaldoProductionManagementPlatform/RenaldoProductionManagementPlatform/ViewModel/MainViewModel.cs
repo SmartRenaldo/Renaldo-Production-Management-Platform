@@ -35,7 +35,7 @@ namespace RenaldoProductionManagementPlatform.ViewModel
         public MainViewModel()
         {
             TotalCount = _random.Next(10, 500).ToString("0000");
-            ProductionTotalCount = _random.Next(1000, 10000).ToString("00000");
+            ProductionTotalCount = _random.Next(1000, 20000).ToString("00000");
         }
     }
 }
