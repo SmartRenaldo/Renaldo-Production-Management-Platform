@@ -7,6 +7,26 @@
              xmlns:local="clr-namespace:RenaldoProductionManagementPlatform.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style TargetType="GroupBox">
+            <Setter Property="Margin" Value="10, 5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="GroupBox">
+                        <Grid>
+                            <Polyline Points="0 30, 0 10, 10 0, 30 0" Stroke="#AA53e453" StrokeThickness="1"
+                                      VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                            <Ellipse Width="4" Height="4" VerticalAlignment="Top" HorizontalAlignment="Left"
+                                     Fill="#9918AABD" Margin="25, -2, 0, 0"/>
+                            <Ellipse Width="4" Height="4" VerticalAlignment="Top" HorizontalAlignment="Left"
+                                     Fill="#9918AABD" Margin="-2, 25, 0, 0"/>
+                            
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -14,6 +34,7 @@
             <RowDefinition Height="120"/>
         </Grid.RowDefinitions>
 
+        <!-- First Part (First Row) -->
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
@@ -72,6 +93,30 @@
             <Button Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="20, 0"
                     Content="Configure" Tag="&#xe625;" Style="{StaticResource ButtonStyle}" Height="33" Width="95">
             </Button>
+            
+        </Grid>
+        
+        <!-- Second Part -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <!-- First Column -->
+            <UniformGrid Columns="1" Margin="10, 0">
+                <GroupBox Header="Capacity"/>
+                <GroupBox Header="Quality"/>
+                <GroupBox Header="Environment"/>
+            </UniformGrid>
+
+            <!-- Thrid Column -->
+            <UniformGrid Columns="1" Margin="10, 0" Grid.Column="2">
+                <GroupBox Header="Capacity"/>
+                <GroupBox Header="Quality"/>
+                <GroupBox Header="Environment"/>
+            </UniformGrid>
         </Grid>
     </Grid>
 </UserControl>
