@@ -127,18 +127,36 @@
             
             <!-- First Column -->
             <UniformGrid Columns="1" Margin="10, 0">
-                <GroupBox Header="Capacity"/>
-                <GroupBox Header="Quality"/>
-                <GroupBox Header="Environment"/>
+                <GroupBox Header="Capacity" FontWeight="Bold"/>
+                <GroupBox Header="Quality" FontWeight="Bold"/>
+                <GroupBox Header="Environment" FontWeight="Bold">
+                </GroupBox>
             </UniformGrid>
 
             <!-- Thrid Column -->
             <UniformGrid Columns="1" Margin="10, 0" Grid.Column="2">
-                <GroupBox Header="Capacity">
-                    <TextBlock Text="Hello"/>
+                <GroupBox Header="Environment" FontWeight="Bold">
+                    <ItemsControl ItemsSource="{Binding Environment}" VerticalAlignment="Center" Margin="0, 20, 0, 0">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <UniformGrid Columns="3"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock Text="{Binding Header}" Margin="0, 5"
+                                               Foreground="#88FFFFFF"/>
+                                    <TextBlock Text="{Binding Value}" HorizontalAlignment="Center"
+                                               Foreground="#FF53e453" Margin="0, 0, 0, 0"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </GroupBox>
-                <GroupBox Header="Quality"/>
-                <GroupBox Header="Environment"/>
+                <GroupBox Header="Capacity" FontWeight="Bold">
+                </GroupBox>
+                <GroupBox Header="Quality" FontWeight="Bold"/>
             </UniformGrid>
         </Grid>
     </Grid>

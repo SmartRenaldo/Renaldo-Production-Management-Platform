@@ -1,4 +1,5 @@
 ﻿using RenaldoProductionManagementPlatform.Base;
+using RenaldoProductionManagementPlatform.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,12 +40,23 @@ namespace RenaldoProductionManagementPlatform.ViewModel
             set { SetProperty(ref _defectiveItemsTotalCount, value); }
         }
 
+        public List<MonitorItemModel> Environment { get; set; }
+
         public MainViewModel()
         {
             TotalCount = _random.Next(10, 500).ToString("0000");
             var ProductionTotalCountInt = _random.Next(1000, 20000);
             ProductionTotalCount = ProductionTotalCountInt.ToString("00000");
             DefectiveItemsTotalCount = (0.01 * ProductionTotalCountInt * _random.Next(3, 9)).ToString("0000");
+
+            // init Environment
+            Environment = new List<MonitorItemModel>();
+            Environment.Add(new MonitorItemModel { Header = "PM 2.5 (m³)" });
+            Environment.Add(new MonitorItemModel { Header = "CO (ppm)" });
+            Environment.Add(new MonitorItemModel { Header = "H2S (ppm)" }); 
+            Environment.Add(new MonitorItemModel { Header = "Temprature (°C)" });
+            Environment.Add(new MonitorItemModel { Header = "Humidity (%)" });
+            Environment.Add(new MonitorItemModel { Header = "Illumination (%)" });
         }
     }
 }
