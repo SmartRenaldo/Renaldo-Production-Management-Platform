@@ -132,38 +132,60 @@
                 <GroupBox Header="Environment" FontWeight="Bold">
                 </GroupBox>
                 <GroupBox Header="Capacity" FontWeight="Bold">
-                    <lvc:CartesianChart>
-                        <lvc:CartesianChart.Series>
-                            <lvc:ColumnSeries Values="300, 400, 500, 200, 560, 470, 720, 330"
+                    <Grid>
+                        <lvc:CartesianChart Margin="10, 30, 10, 0">
+                            <lvc:CartesianChart.Series>
+                                <lvc:ColumnSeries Values="300, 400, 500, 200, 560, 470, 720, 330"
                                           MaxColumnWidth="10" Title="Production Count">
-                                <lvc:ColumnSeries.Fill>
-                                    <LinearGradientBrush StartPoint="0, 0" EndPoint="0, 1">
-                                        <GradientStop Color="#FF0766f5" Offset="0"/>
-                                        <GradientStop Color="#FF10479c" Offset="0"/>
-                                    </LinearGradientBrush>
-                                </lvc:ColumnSeries.Fill>
-                            </lvc:ColumnSeries>
-                            <lvc:ColumnSeries Values="29, 35, 24, 95, 69, 58, 89, 48"
-                                              MaxColumnWidth="10" Title="Defective Items">
-                                <lvc:ColumnSeries.Fill>
-                                    <LinearGradientBrush StartPoint="0, 0" EndPoint="0, 1">
-                                        <GradientStop Color="#FFf50707" Offset="0"/>
-                                        <GradientStop Color="#FF9c1510" Offset="1"/>
-                                    </LinearGradientBrush>
-                                </lvc:ColumnSeries.Fill>
-                            </lvc:ColumnSeries>
-                        </lvc:CartesianChart.Series>
-                        <lvc:CartesianChart.AxisX>
-                            <lvc:Axis Labels="9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00"></lvc:Axis>
-                        </lvc:CartesianChart.AxisX>
-                    </lvc:CartesianChart>
+                                    <lvc:ColumnSeries.Fill>
+                                        <LinearGradientBrush StartPoint="0, 0" EndPoint="0, 1">
+                                            <GradientStop Color="#FF0766f5" Offset="0"/>
+                                            <GradientStop Color="#FF10479c" Offset="0"/>
+                                        </LinearGradientBrush>
+                                    </lvc:ColumnSeries.Fill>
+                                </lvc:ColumnSeries>
+                                <lvc:ColumnSeries Values="29, 35, 24, 95, 69, 58, 89, 48"
+                                              MaxColumnWidth="10" Title="Defective Items Count">
+                                    <lvc:ColumnSeries.Fill>
+                                        <LinearGradientBrush StartPoint="0, 0" EndPoint="0, 1">
+                                            <GradientStop Color="#FFf50707" Offset="0"/>
+                                            <GradientStop Color="#FF9c1510" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </lvc:ColumnSeries.Fill>
+                                </lvc:ColumnSeries>
+                            </lvc:CartesianChart.Series>
+                            <lvc:CartesianChart.AxisX>
+                                <lvc:Axis Labels="9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00">
+                                    <lvc:Axis.Separator>
+                                        <lvc:Separator Step="1" StrokeThickness="0"/>
+                                    </lvc:Axis.Separator>
+                                </lvc:Axis>
+                            </lvc:CartesianChart.AxisX>
+                            <lvc:CartesianChart.AxisY>
+                                <lvc:Axis MinValue="0" MaxValue="1000">
+                                    <lvc:Axis.Separator>
+                                        <lvc:Separator Step="200"/>
+                                    </lvc:Axis.Separator>
+                                </lvc:Axis>
+                            </lvc:CartesianChart.AxisY>
+                        </lvc:CartesianChart>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Top"
+                                    HorizontalAlignment="Right" Margin="10">
+                            <Border Width="8" Height="8" Background="#FF0766f5" Margin="5, 0"/>
+                            <TextBlock Text="Production Count" FontWeight="Light"
+                                       FontSize="12" Foreground="#FFFFFFFF"/>
+                            <Border Width="8" Height="8" Background="#FFf50707" Margin="5, 0"/>
+                            <TextBlock Text="Defective Items Count" FontWeight="Light"
+                                       FontSize="12" Foreground="#FFFFFFFF"/>
+                        </StackPanel>
+                    </Grid>
                 </GroupBox>
             </UniformGrid>
 
             <!-- Thrid Column -->
             <UniformGrid Columns="1" Margin="10, 0" Grid.Column="2">
                 <GroupBox Header="Environment" FontWeight="Bold">
-                    <ItemsControl ItemsSource="{Binding Environment}" VerticalAlignment="Center" Margin="8, 20, 8, 0">
+                    <ItemsControl ItemsSource="{Binding Environment}" VerticalAlignment="Center" Margin="10, 20, 10, 0">
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <UniformGrid Columns="3"/>
