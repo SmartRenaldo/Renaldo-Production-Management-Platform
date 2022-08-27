@@ -35,6 +35,8 @@
                                     HorizontalAlignment="Right" Margin="0, 10"/>
                             <Border BorderBrush="#5553e453" BorderThickness="0, 1, 0, 0"
                                     VerticalAlignment="Bottom" Margin="10, 0"/>
+                            <TextBlock Text="{TemplateBinding Header}" Foreground="#53e453"
+                                       VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25, 8"/>
                         </Grid>
                     </ControlTemplate>
                 </Setter.Value>
