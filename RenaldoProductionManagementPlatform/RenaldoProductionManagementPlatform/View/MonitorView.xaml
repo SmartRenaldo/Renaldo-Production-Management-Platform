@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              xmlns:local="clr-namespace:RenaldoProductionManagementPlatform.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
@@ -127,9 +128,35 @@
             
             <!-- First Column -->
             <UniformGrid Columns="1" Margin="10, 0">
-                <GroupBox Header="Capacity" FontWeight="Bold"/>
                 <GroupBox Header="Quality" FontWeight="Bold"/>
                 <GroupBox Header="Environment" FontWeight="Bold">
+                </GroupBox>
+                <GroupBox Header="Capacity" FontWeight="Bold">
+                    <lvc:CartesianChart>
+                        <lvc:CartesianChart.Series>
+                            <lvc:ColumnSeries Values="300, 400, 500, 200, 560, 470, 720, 330"
+                                          MaxColumnWidth="10" Title="Production Count">
+                                <lvc:ColumnSeries.Fill>
+                                    <LinearGradientBrush StartPoint="0, 0" EndPoint="0, 1">
+                                        <GradientStop Color="#FF0766f5" Offset="0"/>
+                                        <GradientStop Color="#FF10479c" Offset="0"/>
+                                    </LinearGradientBrush>
+                                </lvc:ColumnSeries.Fill>
+                            </lvc:ColumnSeries>
+                            <lvc:ColumnSeries Values="29, 35, 24, 95, 69, 58, 89, 48"
+                                              MaxColumnWidth="10" Title="Defective Items">
+                                <lvc:ColumnSeries.Fill>
+                                    <LinearGradientBrush StartPoint="0, 0" EndPoint="0, 1">
+                                        <GradientStop Color="#FFf50707" Offset="0"/>
+                                        <GradientStop Color="#FF9c1510" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </lvc:ColumnSeries.Fill>
+                            </lvc:ColumnSeries>
+                        </lvc:CartesianChart.Series>
+                        <lvc:CartesianChart.AxisX>
+                            <lvc:Axis Labels="9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00"></lvc:Axis>
+                        </lvc:CartesianChart.AxisX>
+                    </lvc:CartesianChart>
                 </GroupBox>
             </UniformGrid>
 

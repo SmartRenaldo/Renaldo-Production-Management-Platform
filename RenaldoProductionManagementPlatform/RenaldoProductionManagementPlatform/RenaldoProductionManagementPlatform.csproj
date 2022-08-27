@@ -22,6 +22,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Asset\Font\digital_display.ttf" />
     <Resource Include="Asset\Font\iconfont.ttf" />
     <Resource Include="Asset\Image\3d-printer.png" />

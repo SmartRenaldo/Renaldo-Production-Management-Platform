@@ -22,3 +22,6 @@ C:\Projects\Renaldo Production Management Platform\RenaldoProductionManagementPl
 C:\Projects\Renaldo Production Management Platform\RenaldoProductionManagementPlatform\RenaldoProductionManagementPlatform\obj\Debug\net6.0-windows\View\MonitorView.g.cs
 C:\Projects\Renaldo Production Management Platform\RenaldoProductionManagementPlatform\RenaldoProductionManagementPlatform\obj\Debug\net6.0-windows\View\MonitorView.baml
 C:\Projects\Renaldo Production Management Platform\RenaldoProductionManagementPlatform\RenaldoProductionManagementPlatform\obj\Debug\net6.0-windows\App.baml
+C:\Projects\Renaldo Production Management Platform\RenaldoProductionManagementPlatform\RenaldoProductionManagementPlatform\bin\Debug\net6.0-windows\LiveCharts.dll
+C:\Projects\Renaldo Production Management Platform\RenaldoProductionManagementPlatform\RenaldoProductionManagementPlatform\bin\Debug\net6.0-windows\LiveCharts.Wpf.dll
+C:\Projects\Renaldo Production Management Platform\RenaldoProductionManagementPlatform\RenaldoProductionManagementPlatform\obj\Debug\net6.0-windows\RenaldoProductionManagementPlatform.csproj.CopyComplete

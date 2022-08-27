@@ -57,6 +57,13 @@ namespace RenaldoProductionManagementPlatform.ViewModel
             Environment.Add(new MonitorItemModel { Header = "Temprature (°C)" });
             Environment.Add(new MonitorItemModel { Header = "Humidity (%)" });
             Environment.Add(new MonitorItemModel { Header = "Illumination (%)" });
+
+            Environment[0].Value = Math.Round(_random.NextDouble() * 0.01, 3);
+            Environment[1].Value = Math.Round(_random.NextDouble() * 0.03, 4);
+            Environment[2].Value = Math.Round(_random.NextDouble() * 0.02, 4);
+            Environment[3].Value = _random.Next(5, 30);
+            Environment[4].Value = Math.Round(_random.NextDouble() * 0.1, 4);
+            Environment[5].Value = Math.Round(10 * _random.NextDouble(), 2);
         }
     }
 }
