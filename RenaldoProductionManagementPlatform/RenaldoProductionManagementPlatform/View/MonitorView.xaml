@@ -136,7 +136,7 @@
             <!-- Thrid Column -->
             <UniformGrid Columns="1" Margin="10, 0" Grid.Column="2">
                 <GroupBox Header="Environment" FontWeight="Bold">
-                    <ItemsControl ItemsSource="{Binding Environment}" VerticalAlignment="Center" Margin="0, 20, 0, 0">
+                    <ItemsControl ItemsSource="{Binding Environment}" VerticalAlignment="Center" Margin="8, 20, 8, 0">
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <UniformGrid Columns="3"/>
