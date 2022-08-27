@@ -37,6 +37,11 @@
                                     VerticalAlignment="Bottom" Margin="10, 0"/>
                             <TextBlock Text="{TemplateBinding Header}" Foreground="#53e453"
                                        VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25, 8"/>
+                            <Path Data="M0 0, 3 0, 5 4, 3 8 , 0 8, 3 4" Fill="#AA53e453"
+                                  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10, 13"/>
+                            <Path Data="M0 0, 3 0, 5 4, 3 8 , 0 8, 3 4" Fill="#5553e453"
+                                  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="16, 13"/>
+                            <ContentPresenter/>
                         </Grid>
                     </ControlTemplate>
                 </Setter.Value>
@@ -129,7 +134,9 @@
 
             <!-- Thrid Column -->
             <UniformGrid Columns="1" Margin="10, 0" Grid.Column="2">
-                <GroupBox Header="Capacity"/>
+                <GroupBox Header="Capacity">
+                    <TextBlock Text="Hello"/>
+                </GroupBox>
                 <GroupBox Header="Quality"/>
                 <GroupBox Header="Environment"/>
             </UniformGrid>
